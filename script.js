@@ -5,6 +5,7 @@ const messageContainer = document.getElementById('message-container');
 
 const yourName = prompt('What is your name?');
 
+//let the user know he/she is connected
 appendMessage('You joined');
 
 //sending new user name to the server
