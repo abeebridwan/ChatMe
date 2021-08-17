@@ -1,8 +1,25 @@
-const io = require('socket.io')(3000, {
-  cors: {
-    origin: "*",
-  },
-});
+const express = require('express');
+const app = express();
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
+const port = process.env.PORT || 3000;
+
+
+app.set('views', './views');
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
+
+const rooms = {};
+
+app.get('/', (req, res) => {
+  res.render('index', { rooms: room })
+})
+
+app.get('/:room', (req, res) => {
+  res.render('index', { rooms: room })
+})
+
 const users = {};
 
 io.on('connection', socket => {
@@ -20,4 +37,9 @@ io.on('connection', socket => {
     socket.broadcast.emit('user-disconnected', users[socket.id]);
     delete users[socket.id]
   })
+})
+
+server.listen(port, (err) => {
+  if (err) throw err;
+  console.log(`> Read on http://localhost:${port}`)
 })
