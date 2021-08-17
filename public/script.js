@@ -3,13 +3,22 @@ const form = document.getElementById("send-container");
 const input = document.getElementById("message-input");
 const messageContainer = document.getElementById('message-container');
 
-const yourName = prompt('What is your name?');
 
-//let the user know he/she is connected
-appendMessage('You joined');
+if (messageContainer != null) {
+  const yourName = prompt('What is your name?');
+  appendMessage('You joined');
+  socket.emit('new-user', yourName)
 
-//sending new user name to the server
-socket.emit('new-user', yourName)
+  //on form submitted, value emitted to the server
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const message = input.value;
+    socket.emit('send-chat-message', message);
+    input.value = '';
+  })
+
+}
+
 
 //for new user connection
 socket.on('user-connected', data => {
@@ -26,13 +35,6 @@ socket.on('chat-message', data => {
   appendMessage(`${data.name}: ${data.message}`)
 })
 
-//on form submitted, value emitted to the server
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  const message = input.value;
-  socket.emit('send-chat-message', message);
-  input.value = '';
-})
 
 // to append any data or message in to the user interface
 function appendMessage(message) {

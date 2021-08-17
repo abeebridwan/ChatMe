@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat App</title>
     <style></style>
-    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="socket.io/socket.io.js"></script>
     <script defer src="script.js"></script>
   </head>
   <body>
-    <div id="message-container"></div>
-    <form id="send-container">
-      <input type="text" id="message-input" />
-      <button type="submit" id="send-button">Send</button>
-    </form>
+    <div id="room">
+      <% Object.keys(rooms).forEach(room => { %>  
+      <div><%= room %></div>
+      <a href="/<%= room %>">Join</a>
+      <% }) %>
+      <form action="/room" method="POST">
+        <input name="room" type="text" required />
+        <button type="submit">New Room</button>
+      </form>
+    </div>
   </body>
 </html>
