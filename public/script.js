@@ -2,6 +2,7 @@ const socket = io('http://localhost:3000');
 const form = document.getElementById("send-container");
 const input = document.getElementById("message-input");
 const messageContainer = document.getElementById('message-container');
+const roomToJoin = document.getElementById('room');
 
 
 if (messageContainer != null) {
@@ -19,6 +20,15 @@ if (messageContainer != null) {
 
 }
 
+socket.on('room-created', room => {
+  const roomEle = document.createElement('div');
+  roomEle.innerText = room;
+  const roomLink = document.createElement("a");
+  roomLink.href = `/${room}`;
+  roomLink.innerText = 'Join';
+  roomToJoin.append(roomEle);
+  roomToJoin.append(roomLink);
+})
 
 //for new user connection
 socket.on('user-connected', data => {

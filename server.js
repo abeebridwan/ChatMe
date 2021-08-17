@@ -1,3 +1,4 @@
+const { on } = require('events');
 const express = require('express');
 const app = express();
 const server = require('http').createServer(app);
@@ -21,6 +22,11 @@ app.get('/', (_, res) => {
 
 //room route
 app.get('/:room', (req, res) => {
+  console.log(rooms[req.params.room]);
+  if (rooms[req.params.room] == null) {
+    console.log('room existed')
+    return res.redirect('/')
+  }
   res.render('room', { roomName: req.params.room })
 })
 
@@ -33,6 +39,7 @@ app.post('/room', (req, res) => {
   rooms[req.body.room] = { users: {} };
   res.redirect(req.body.room);
   //send message that new room was created
+  io.emit('room-created', req.body.room)
 })
 
 /* socket.io connection */

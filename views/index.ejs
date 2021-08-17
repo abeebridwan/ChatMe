@@ -11,14 +11,14 @@
   </head>
   <body>
     <div id="room">
-      <% Object.keys(rooms).forEach(room => { %>  
+      <% Object.keys(rooms).forEach(room => { %>
       <div><%= room %></div>
       <a href="/<%= room %>">Join</a>
       <% }) %>
-      <form action="/room" method="POST">
-        <input name="room" type="text" required />
-        <button type="submit">New Room</button>
-      </form>
     </div>
+    <form action="/room" method="POST">
+      <input name="room" type="text" required />
+      <button type="submit">New Room</button>
+    </form>
   </body>
 </html>
