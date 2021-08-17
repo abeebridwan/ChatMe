@@ -4,23 +4,23 @@ const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 const port = process.env.PORT || 3000;
 
-
 app.set('views', './views');
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 const rooms = {};
-
-app.get('/', (req, res) => {
-  res.render('index', { rooms: room })
-})
-
-app.get('/:room', (req, res) => {
-  res.render('index', { rooms: room })
-})
-
 const users = {};
+
+//home route
+app.get('/', (_, res) => {
+  res.render('index', { rooms: rooms })
+})
+
+//room route
+app.get('/:room', (req, res) => {
+  res.render('room', { roomName: req.params.room })
+})
 
 io.on('connection', socket => {
   //new user's name broadcast to all other users 
@@ -39,7 +39,4 @@ io.on('connection', socket => {
   })
 })
 
-server.listen(port, (err) => {
-  if (err) throw err;
-  console.log(`> Read on http://localhost:${port}`)
-})
+server.listen(port, () => console.log(`> Read on http://localhost:${port}`))
