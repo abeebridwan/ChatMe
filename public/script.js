@@ -4,31 +4,35 @@ const input = document.getElementById("message-input");
 const messageContainer = document.getElementById('message-container');
 const roomToJoin = document.getElementById('room');
 
-
+/* sending emitters */
 if (messageContainer != null) {
   const yourName = prompt('What is your name?');
   appendMessage('You joined');
-  socket.emit('new-user', yourName)
+  socket.emit('new-user', roomName, yourName)
 
   //on form submitted, value emitted to the server
   form.addEventListener('submit', e => {
     e.preventDefault();
     const message = input.value;
-    socket.emit('send-chat-message', message);
+    if (message === '' || message === null) return
+    socket.emit('send-chat-message', roomName, message);
     input.value = '';
   })
-
 }
 
-socket.on('room-created', room => {
-  const roomEle = document.createElement('div');
-  roomEle.innerText = room;
-  const roomLink = document.createElement("a");
-  roomLink.href = `/${room}`;
-  roomLink.innerText = 'Join';
-  roomToJoin.append(roomEle);
-  roomToJoin.append(roomLink);
-})
+/* receiving sockets */
+//embed new room created to the index page
+if (roomToJoin != null) {
+  socket.on('room-created', room => {
+    const roomEle = document.createElement('div');
+    roomEle.innerText = room;
+    const roomLink = document.createElement("a");
+    roomLink.href = `/${room}`;
+    roomLink.innerText = 'Join';
+    roomToJoin.append(roomEle);
+    roomToJoin.append(roomLink);
+  })
+}
 
 //for new user connection
 socket.on('user-connected', data => {
@@ -37,7 +41,9 @@ socket.on('user-connected', data => {
 
 // on user disconnected
 socket.on('user-disconnected', data => {
-  appendMessage(`${data} disconnected`)
+  if (data !== null) {
+    appendMessage(`${data} disconnected`)
+  }
 })
 
 //chat message
