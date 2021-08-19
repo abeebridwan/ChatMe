@@ -1,9 +1,6 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 *,
 *:before,
@@ -12,15 +9,10 @@ html {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  text-align: center;
 }
 body {
   background-color: #1a1838;
   color: #fff;
-  height: 100vh;
-  width: 100vw;
-  max-width: 2000px;
-  max-height: 2000px;
 }
 nav {
   padding: 3rem 3rem 3rem 2rem;
@@ -37,11 +29,6 @@ span {
   text-align: center;
   font-size: 1.8rem;
 }
-@media (max-width: 20em) {
-  svg {
-    display: none;
-  }
-}
 @media (min-width: 35.5em) {
   nav {
     padding-right: 4.8rem;
@@ -53,26 +40,4 @@ span {
     padding-left: 2rem;
     font-size: 2.5rem;
   }
-}
-main {
-  height: 80%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  font-size: 2rem;
-}
-img {
-  width: 15rem;
-  height: 15rem;
-  filter: drop-shadow(white 0px 0px 5px);
-}
-@media (min-width: 35.5em) {
-  img {
-    width: 30rem;
-    height: 20rem;
-  }
-}
-p {
-  filter: drop-shadow(white 0px 0px 5px);
 }

@@ -44,18 +44,26 @@
         </g>
         <!----><!---->
       </svg>
-      <span><p>Anonymous Chat Rooms for Everyone</p></span>
+      <span>Anonymous Chat Rooms for Everyone</span>
     </nav>
-    <img src="chat.svg" alt="chat image" />
-    <div id="room">
-      <% Object.keys(rooms).forEach(room => { %>
-      <div><%= room %></div>
-      <a href="/<%= room %>">Join</a>
-      <% }) %>
-    </div>
-    <form action="/room" method="POST">
-      <input name="room" type="text" required />
-      <button type="submit">New Room</button>
-    </form>
+    <main>
+      <div>
+        <img src="chat.svg" alt="chat image" title="Chat Signature" />
+        <p>Talk To Strangers Live</p>
+      </div>
+      <div id="board">
+        <div id="info"></div>
+        <div id="room">
+          <% Object.keys(rooms).forEach(room => { %>
+          <div><%= room %></div>
+          <a href="/<%= room %>">Join</a>
+          <% }) %>
+        </div>
+      </div>
+      <form action="/room" method="POST">
+        <input name="room" type="text" required />
+        <button type="submit">New Room</button>
+      </form>
+    </main>
   </body>
 </html>
