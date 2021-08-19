@@ -1,0 +1,143 @@
+<svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="39.793682mm"
+      viewBox="0 0 162.07226 141.00124"
+      width="45.740395mm"
+    >
+      <g transform="translate(-227.85627 -99.814005)">
+        <path
+          d="m95.365234 35.052734c-42.960124-.000721-77.786789 25.917062-77.787109 57.888672.03729 21.737614 16.437312 41.608924 42.423828 51.480474l-.03711-.004 5.845703 2.30078c6.69872 4.75801-23.797963 21.62022-20.226563 22.39844 21.71948 2.83178 47.570661-8.87196 55.619137-17.64453.47773-.53285.50703-.84968 2.0293-1.05274l.6192-.0477c.68827-.0536.97183-.0498 1.65424-.11639.94034-.046 1.20268-.24681 2.72887-.27697l-.38121.027c37.38427-4.50819 65.2537-28.55763 65.29687-57.064454-.00032-31.971043-34.82579-57.88859-77.785157-57.888672z"
+          fill="#fff"
+          fill-rule="evenodd"
+          stroke="#fff"
+          stroke-linejoin="bevel"
+          stroke-width="6.5"
+          transform="translate(213.52814 68.011361)"
+        />
+        <circle
+          cx="295.25058"
+          cy="169.37538"
+          fill="none"
+          r="17.867073"
+          stroke="#fff"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="10"
+        />
+        <circle
+          cx="295.28021"
+          cy="169.36261"
+          fill="none"
+          r="17.867073"
+          stroke="#0076ff"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="6.6"
+        />
+        <circle
+          cx="319.63794"
+          cy="169.40726"
+          fill="none"
+          r="17.867073"
+          stroke="#fff"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="10"
+        />
+        <path
+          d="m284.10475 200.55107 22.1577.20089"
+          fill="none"
+          stroke="#0076ff"
+          stroke-width="6.5"
+        />
+        <path
+          d="m336.7596 137.22713 18.27745-3.25143-3.21986 18.21432z"
+          fill="#0076ff"
+          fill-rule="evenodd"
+        />
+        <circle
+          cx="319.65015"
+          cy="169.42575"
+          fill="none"
+          r="17.867073"
+          stroke="#0076ff"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="6.6"
+        />
+        <circle
+          cx="307.04364"
+          cy="151.55864"
+          fill="none"
+          r="17.867073"
+          stroke="#fff"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="10"
+        />
+        <circle
+          cx="-307.03607"
+          cy="151.56961"
+          fill="none"
+          r="17.867073"
+          stroke="#0076ff"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="6.6"
+          transform="scale(-1 1)"
+        />
+        <path
+          d="m330.36133 155.14453c-3.04107-2.29023-6.78358-3.59875-10.72266-3.60351-.98887.003-1.97332.0976-2.94531.26367"
+          fill="none"
+          stroke="#fff"
+          stroke-linejoin="bevel"
+          stroke-width="10"
+        />
+        <path
+          d="m334.27816 155.06953 10.55804-10.55804"
+          fill="none"
+          stroke="#0076ff"
+          stroke-width="6.5"
+        />
+        <path
+          d="m289.9266 119.37099-18.27745-3.25142 3.21986 18.21431z"
+          fill="#0076ff"
+          fill-rule="evenodd"
+        />
+        <g fill="none">
+          <path
+            d="m292.40804 137.21339-10.55804-10.55803"
+            stroke="#0076ff"
+            stroke-width="6.5"
+          />
+          <path
+            d="m279.82494 139.32454 13.19042-13.52635 2.27985-2.33791"
+            stroke="#0076ff"
+            stroke-width="6.5"
+          />
+          <path
+            d="m335.23633 160.72266c-3.15193-5.64798-9.11019-9.15152-15.57813-9.16016-1.76251.005-3.51455.27104-5.19922.78906"
+            stroke="#0076ff"
+            stroke-linejoin="bevel"
+            stroke-width="6.6"
+          />
+          <path
+            d="m294.39648 151.53906c-9.52013.45629-17.00603 8.30488-17.01171 17.83594-.00006 9.8678 7.99938 17.86725 17.86718 17.86719 6.54323-.00037 12.56287-3.57739 15.69141-9.32422"
+            stroke="#fff"
+            stroke-linejoin="bevel"
+            stroke-width="10"
+          />
+          <path
+            d="m295.09081 188.05042v23.80173"
+            stroke="#0076ff"
+            stroke-width="6.5"
+          />
+          <path
+            d="m295.2793 151.49414c-9.8678-.00006-17.86725 7.99939-17.86719 17.86719-.00006 9.8678 7.99939 17.86725 17.86719 17.86719 6.93013-.009 13.23007-4.02432 16.16406-10.30274"
+            stroke="#0076ff"
+            stroke-linejoin="bevel"
+            stroke-width="6.6"
+          />
+        </g>
+      </g>
+    </svg>

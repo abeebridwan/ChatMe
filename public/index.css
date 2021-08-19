@@ -1,0 +1,43 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #1a1838;
+  color: #fff;
+}
+nav {
+  padding: 3rem 3rem 3rem 2rem;
+  display: flex;
+  border-bottom: 1px solid #fff;
+}
+svg {
+  display: inline-block;
+  width: 13.8rem;
+  padding-right: 1.5rem;
+}
+span {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.8rem;
+}
+@media (min-width: 35.5em) {
+  nav {
+    padding-right: 4.8rem;
+  }
+  svg {
+    padding-right: 0;
+  }
+  span {
+    padding-left: 2rem;
+    font-size: 2.5rem;
+  }
+}
