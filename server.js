@@ -35,7 +35,7 @@ app.post('/room', (req, res) => {
   }
   rooms[req.body.room] = { users: {} };
   res.redirect(req.body.room);
-  //send message that new room was created to update their index page
+  //send message that new room was created to update their index pages
   io.emit('room-created', req.body.room)
 })
 
@@ -61,7 +61,6 @@ io.on('connection', socket => {
 })
 
 function getUserRooms(socket) {
-  console.log({ rooms })
   return Object.entries(rooms).reduce((names, [name, room]) => {
     console.log({ name, room })
     if (room.users[socket.id] != null) names.push(name);

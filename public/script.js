@@ -14,7 +14,6 @@ if (messageContainer != null) {
   form.addEventListener('submit', e => {
     e.preventDefault();
     const message = input.value;
-    if (message === '' || message === null) return
     socket.emit('send-chat-message', roomName, message);
     input.value = '';
   })
