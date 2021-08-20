@@ -47,23 +47,39 @@
       <span>Anonymous Chat Rooms for Everyone</span>
     </nav>
     <main>
-      <div>
+      <div id="signature">
         <img src="chat.svg" alt="chat image" title="Chat Signature" />
-        <p>Talk To Strangers Live</p>
+        <p id="logoText">Talk To Strangers Live</p>
       </div>
       <div id="board">
-        <div id="info"></div>
+        <div id="info">
+          <h3>Share Secrets with Strangers</h3>
+          <p>No Registration required</p>
+
+          <p>Pick or Create a Room</p>
+          <p>Put in any name of your choice</p>
+          <p>Start revealing those secrets you have been hiding</p>
+
+          <p id="note">
+            <i>
+              Note: We do not save or hide anything, once you leave the chat
+              room everything is gone
+            </i>
+          </p>
+
+          <form action="/room" method="POST">
+            <input name="room" type="text" required />
+            <button type="submit">New Room</button>
+          </form>
+        </div>
         <div id="room">
           <% Object.keys(rooms).forEach(room => { %>
-          <div><%= room %></div>
-          <a href="/<%= room %>">Join</a>
+          <div id="roomName"><%= room %></div>
+          <a id="join" href="/<%= room %>">Join</a>
+          <br />
           <% }) %>
         </div>
       </div>
-      <form action="/room" method="POST">
-        <input name="room" type="text" required />
-        <button type="submit">New Room</button>
-      </form>
     </main>
   </body>
 </html>
